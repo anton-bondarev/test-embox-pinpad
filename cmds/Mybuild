@@ -1,0 +1,9 @@
+package project.pinpad
+
+@App
+@AutoCmd
+@Cmd(name = "getpin", help="Asked for pin")
+module getpin {
+	source "getpin.c"
+}
+
