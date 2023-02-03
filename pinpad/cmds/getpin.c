@@ -30,7 +30,7 @@ int main(int argc, char **argv)	{
 			return 0;
 		}
 	}
-	fd = open(argv[argc - 1], O_RDONLY);
+	fd = open(argv[argc - 1], O_RDONLY|O_NONBLOCK);
 	if (fd==-1) {
 		printf("Failed to open %s", argv[argc - 1]);
 		return -1;
@@ -44,7 +44,7 @@ int main(int argc, char **argv)	{
 	unsigned char code[4];
 	unsigned char key, pin[4];
 	
-//	clock_t t0=clock();
+	clock_t t0=clock();
 	
 	for (int i=0; i<4;) {
 		if ((read(fd, &ev, sizeof ev) > 0) && (ev.type & KBD_KEY_PRESSED)) {
@@ -59,12 +59,13 @@ int main(int argc, char **argv)	{
 				if (key == 'C') break;
 			}
 		}
-/*		if (clock()-t0 > CLOCKS_PER_SEC*PIN_TIMEOUT) {
+		if (clock()-t0 > CLOCKS_PER_SEC*PIN_TIMEOUT) {
 		key='C';
-		printf("\nYou lost...");
+		printf("\nYou're too slow...");
 		break;
 		}
-*/	}
+	usleep(1000);
+	}
 	if (key == 'C') {
 		puts("\nOperation canceled");
 	} else {
