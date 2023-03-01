@@ -2,8 +2,9 @@
 
 This is a sample using keypad or ps-keyboard device to get 4-digit pin-code
 
-You can run these sample on Embox (qemu, stm32)
-Running on Embox
+You can run this sample on Embox (qemu, stm32)
+
+### Running on Embox
 
 You need to have both repos cloned - embox and test-embox-pinpad.
 
@@ -21,7 +22,7 @@ ext_project/pinpad/nucleo_f429zi
 ext_project/pinpad/x86-qemu
 ```
 
-## QEMU
+### QEMU
 
 ```
 $ make confload-ext_project/pinpad/x86-qemu
@@ -33,7 +34,7 @@ Run:
 ./scripts/qemu/auto_qemu
 
 
-## NUCLEO F429ZI
+### NUCLEO F429ZI
 
 You can run some samples on NUCLEO F429ZI:
 
