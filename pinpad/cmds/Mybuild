@@ -7,3 +7,10 @@ module getpin {
 	source "getpin.c"
 }
 
+@App
+@AutoCmd
+@Cmd(name = "fs_test", help="Create some file in /mnt directory")
+module fs_test {
+	source "fs_test.c"
+}
+
