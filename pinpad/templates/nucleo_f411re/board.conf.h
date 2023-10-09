@@ -4,4 +4,5 @@ CONFIG {
 	/* uarts */
 	uarts[1].status = DISABLED;
 	uarts[2].status = ENABLED;
+	uarts[6].status = ENABLED;
 }
