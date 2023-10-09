@@ -4,7 +4,7 @@ CONFIG {
 	/* uarts */
 	uarts[2].status = DISABLED;
 	uarts[3].status = ENABLED;
-	uarts[6].status = DISABLED;
+	uarts[6].status = ENABLED;
 
 	/* spis */
 	spis[1].status  = DISABLED;
