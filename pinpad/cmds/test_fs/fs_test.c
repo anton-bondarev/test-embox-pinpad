@@ -7,6 +7,12 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#ifdef __EMBOX__
+#define TMP_FILE_PATH "/conf/fs.tst"
+#else
+#define TMP_FILE_PATH "fs.tst"
+#endif
+
 int main(void) {
 	FILE *fp;
 	//uint8_t ts[7];
@@ -18,7 +24,7 @@ int main(void) {
 	printf("TEST file system v5\n");
 
 	// init
-	sprintf(path, "/conf/fs.tst");
+	sprintf(path, TMP_FILE_PATH);
 	printf("Filename is %s\n", path);
 
 	// run
