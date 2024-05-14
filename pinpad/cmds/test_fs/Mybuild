@@ -1,0 +1,9 @@
+package project.pinpad
+
+@App
+@AutoCmd
+@Cmd(name = "fs_test", help="")
+module fs_test {
+	source "fs_test.c"
+}
+

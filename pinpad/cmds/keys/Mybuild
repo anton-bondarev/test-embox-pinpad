@@ -1,0 +1,11 @@
+package project.pinpad.cmd
+
+@App
+@AutoCmd
+@Cmd(name = "keys", help="")
+module keys {
+	option string file_keys="/conf/keys"
+
+	source "keys.c"
+}
+
