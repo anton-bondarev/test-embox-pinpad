@@ -2,6 +2,6 @@
 "export HOME=/",
 "mkdir -v /mnt",
 "mount -t ramfs /dev/static_ramdisk /mnt",
-"fs_test",
+//"fs_test",
 "ls /mnt",
 "tish",
